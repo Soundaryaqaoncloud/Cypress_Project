@@ -1,0 +1,19 @@
+{
+  "loginData": {
+    "Username": "Admin",
+    "Password": "admin123"
+  },
+  "registrationData": {
+    "firstName": "Soundarya",
+    "lastName": "Subramaniyan",
+    "gender": "Female",
+    "hobbies": ["Reading","Singing"],
+    "department": "Department of Engineering",
+    "username": "Soundarya",
+    "password": "password123",
+    "confirmPassword": "password123",
+    "email": "Soundarya@example.com",
+    "contactNo": "916374789826",
+    "additionalInfo": "Looking forward to joining the team!"
+  }
+}
