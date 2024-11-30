@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-11-30T12:03:16.786Z",
+    "end": "2024-11-30T12:03:37.977Z",
+    "duration": 21191,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "36c92f71-9a8e-49ba-a9ae-a5f9c251cd61",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\AvantiWeb.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\AvantiWeb.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0db86816-3fe7-41b2-8e6c-f1a249629a16",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "App Login",
+              "fullTitle": "Login App Login",
+              "timedOut": null,
+              "duration": 16222,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\AvantiWeb.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\AvantiWeb.cy.js\\\\Login -- App Login (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit(\"https://avantidash-dot-indihood-qa-in.appspot.com/login\");\ncy.get(':nth-child(2) > .firebaseui-idp-button').click();\ncy.get('.mdl-textfield__input').type(\"xotay28182@etoymail.com\");\ncy.get('.firebaseui-id-submit').click();\ncy.get(':nth-child(3) > .mdl-textfield__input').type(\"Avanti@123\");\ncy.get('.firebaseui-id-submit').click();\n//Loan Application\ncy.get('.app-toolbar-row > :nth-child(1) > [aria-haspopup=\"true\"]').click(); //create option\ncy.get(':nth-child(14) > .mat-menu-item').contains('Loan Application').click(); //Loan application\ncy.get('.mat-figure > .image-panel > image-upload > .img-ul > .img-ul-file-upload > .img-ul-upload').attachFile('blank image.jpg');\ncy.get(':nth-child(2) > :nth-child(1) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-id-field.ng-star-inserted > .value').click();\ncy.contains('span', 'T Valarmathi - Aadhaar1495').click();\ncy.get('section.ng-star-inserted > [fxlayout=\"row\"] > :nth-child(2) > .mat-icon').click();\ncy.get('.value > span > img').click(); //location\ncy.get('.button-panel > .mat-raised-button').click();\ncy.get(':nth-child(2) > :nth-child(4) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-id-field.ng-star-inserted > .value').click();\ncy.get('#mat-option-20 > .mat-option-text > .ng-star-inserted').click(); //loan product\ncy.get('section.ng-star-inserted > [fxlayout=\"row\"] > :nth-child(2) > .mat-icon').click();\ncy.get(':nth-child(2) > :nth-child(5) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-id-field.ng-star-inserted > .value').click();\ncy.get('.mat-form-field-infix').click();\ncy.get('#mat-option-40 > .mat-option-text').click(); //loan purpose category\ncy.get(':nth-child(7) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-number-field.ng-star-inserted > .value').click();\ncy.get('#mat-input-3').type('50000'); //principal\ncy.get('.mat-form-field-suffix > :nth-child(1)').click();\ncy.get(':nth-child(8) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-number-field.ng-star-inserted > .value').click();\ncy.get('#mat-input-4').type('9.57'); //APR\ncy.get('.mat-form-field-suffix > :nth-child(1)').click();\ncy.get(':nth-child(9) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-number-field.ng-star-inserted > .value').click();\ncy.get('#mat-input-5').type('31'); //fixed interval days\ncy.get(':nth-child(9) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-number-field.ng-star-inserted > .number-field > .mat-form-field > .mat-form-field-wrapper > .mat-form-field-flex > .mat-form-field-suffix > :nth-child(1)').click();\ncy.get(':nth-child(10) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-number-field.ng-star-inserted > .value').click();\ncy.get('#mat-input-6').type('12'); //number of installments\ncy.get(':nth-child(10) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-number-field.ng-star-inserted > .number-field > .mat-form-field > .mat-form-field-wrapper > .mat-form-field-flex > .mat-form-field-suffix > :nth-child(1)').click();\ncy.get(':nth-child(12) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-date-field.ng-star-inserted > .value').click();\ncy.get('.mat-datepicker-toggle > .mat-icon-button').click(); // loan start date\ncy.get('.mat-calendar-body-active > .mat-calendar-body-cell-content').click();\ncy.get('.mat-form-field-suffix > :nth-child(2)').click();\ncy.get(':nth-child(14) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-date-field.ng-star-inserted > .value').click();\ncy.get(':nth-child(14) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-date-field.ng-star-inserted > div[_ngcontent-c34=\"\"] > .date-picker > .mat-form-field-wrapper > .mat-form-field-flex > .mat-form-field-suffix > .mat-datepicker-toggle > .mat-icon-button').click();\ncy.get('.mat-calendar-body-active > .mat-calendar-body-cell-content').click(); //first installment date\ncy.get(':nth-child(14) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-date-field.ng-star-inserted > div[_ngcontent-c34=\"\"] > .date-picker > .mat-form-field-wrapper > .mat-form-field-flex > .mat-form-field-suffix > :nth-child(2)').click();\nconst yourFixturePath = 'BLANK IMAGE.jpg';\ncy.get(':nth-child(20) > :nth-child(1) > section.ng-star-inserted > app-repeated-field > .editor-field-label > .actions > .mat-icon').click(); //disbursal passbook image\ncy.get('input[type=\"file\"]').attachFile('blank image.jpg').trigger('change', {\n  force: true\n});\n/* cy.get('.value > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-image-field.ng-star-inserted > :nth-child(1) > .image-panel > image-upload > .img-ul > .img-ul-file-upload > .img-ul-upload > span').attachFile('BLANK IMAGE.jpg')\ncy.get('.value > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-image-field.ng-star-inserted > :nth-child(1) > [fxlayout=\"row\"] > .mat-button > .mat-button-wrapper').click()\ncy.get(':nth-child(21) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-text-field.ng-star-inserted > .value').click()\ncy.get('#mat-input-9').type('1234567890') //disbursal bank acc num\ncy.get('.icon-panel > :nth-child(1)').click()\ncy.get(':nth-child(22) > :nth-child(1) > section.ng-star-inserted > app-single-field > [fxlayout=\"row inline\"] > .field-wrapper > app-id-field.ng-star-inserted > .value').click()\ncy.get('#mat-input-10').type('ICIC0003428 - ICICI Bank Ltd - DO NOT UPDATE - Icici Bank Ltd') //disbursal bank acc name\ncy.get('#mat-option-76').click()\ncy.get('section.ng-star-inserted > [fxlayout=\"row\"] > :nth-child(2) > .mat-icon').click()\ncy.get('app-image-field.ng-star-inserted > :nth-child(1) > .image-panel > image-upload > .img-ul > .img-ul-file-upload > .img-ul-upload > span').click().attachFile('BLANK IMAGE.jpg')\ncy.get('[fxlayout=\"row\"] > .mat-button > .mat-button-wrapper').click()\ncy.get('[style=\"padding: 8px\"] > .mat-button').click()*/",
+              "err": {
+                "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-c0=\"\" aria-haspopup=\"true\" mat-button=\"\" class=\"mat-button\" ng-reflect-menu=\"[object Object]\">...</button>`\n\nis being covered by another element:\n\n`<div class=\"cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing\"></div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-c0=\"\" aria-haspopup=\"true\" mat-button=\"\" class=\"mat-button\" ng-reflect-menu=\"[object Object]\">...</button>`\n\nis being covered by another element:\n\n`<div class=\"cdk-overlay-backdrop cdk-overlay-dark-backdrop cdk-overlay-backdrop-showing\"></div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:111849:68)\n    at ensureDescendents (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:111900:5)\n    at ensureDescendentsAndScroll (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:111906:14)\n    at ensureElIsNotCovered (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:112037:5)\n    at runAllChecks (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:112217:52)\n    at retryActionability (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:112254:16)\n    at tryCatcher (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:143192:68)\n    at <unknown> (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:143133:14)\n    at tryCatcher (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://avantidash-dot-indihood-qa-in.appspot.com/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://cypress-automation/./cypress/e2e/1-getting-started/AvantiWeb.cy.js:14:72)",
+                "diff": null
+              },
+              "uuid": "9654b9c3-a73f-423c-ad7f-87d608963629",
+              "parentUUID": "0db86816-3fe7-41b2-8e6c-f1a249629a16",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9654b9c3-a73f-423c-ad7f-87d608963629"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 16222,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-30T11:59:11.668Z",
+    "end": "2024-11-30T11:59:35.657Z",
+    "duration": 23989,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "46a46f85-83e4-4fac-84d4-fe18ad22ec3c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\Alerts.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\Alerts.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "39fe70c7-fb02-4d84-a77b-1b34b34205fd",
+          "title": "alerts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": " Simple alerts",
+              "fullTitle": "alerts  Simple alerts",
+              "timedOut": null,
+              "duration": 13271,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\Alerts.cy.js\"\n}",
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.get(\"button[onclick='jsAlert()']\").click(); //css element of first  button\ncy.on('window:alert', t => {\n  //validating alert window, to trigger the event(cy.on) t is a method used to store an event\n  expect(t).to.contains(\"I am a JS Alert\"); //validating text on alert window\n});",
+              "err": {},
+              "uuid": "3c092e6b-336f-4015-835d-94a1bca0a900",
+              "parentUUID": "39fe70c7-fb02-4d84-a77b-1b34b34205fd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Confirm alerts",
+              "fullTitle": "alerts Confirm alerts",
+              "timedOut": null,
+              "duration": 1622,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\Alerts.cy.js\"\n}",
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.get(\"button[onclick='jsConfirm()']\").click();\ncy.on('window:confirm', t => {\n  //validating alert window, to trigger the event(cy.on) t is a method used to store an event\n  expect(t).to.contains(\"I am a JS Confirm\"); //validating text on alert window\n});\ncy.on('window:confirm', () => false); //to click on cancel button, to click on ok we can replace false with true",
+              "err": {},
+              "uuid": "91841fa8-b7a8-4080-9227-53845ba07e0c",
+              "parentUUID": "39fe70c7-fb02-4d84-a77b-1b34b34205fd",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Prompt alert",
+              "fullTitle": "alerts Prompt alert",
+              "timedOut": null,
+              "duration": 1317,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\Alerts.cy.js\"\n}",
+              "code": "cy.visit('https://the-internet.herokuapp.com/javascript_alerts');\ncy.window().then(win => {\n  cy.stub(win, 'prompt').returns('welcome'); //passing the text in alert window\n});\n//cy.get(button[onclick='jsPrompt()']).click();",
+              "err": {},
+              "uuid": "ba9eb1a6-b494-46d7-8d07-c345e1f76b6d",
+              "parentUUID": "39fe70c7-fb02-4d84-a77b-1b34b34205fd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3c092e6b-336f-4015-835d-94a1bca0a900",
+            "91841fa8-b7a8-4080-9227-53845ba07e0c",
+            "ba9eb1a6-b494-46d7-8d07-c345e1f76b6d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 16210,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

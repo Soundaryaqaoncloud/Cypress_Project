@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-11-30T12:02:22.030Z",
+    "end": "2024-11-30T12:02:47.081Z",
+    "duration": 25051,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ec209996-77dd-4688-b590-b5cc989ce602",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\Assertions.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\Assertions.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d2c13c66-0c99-4e74-9c2f-9799708415eb",
+          "title": "assertions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "implicit assertions",
+              "fullTitle": "assertions implicit assertions",
+              "timedOut": null,
+              "duration": 7094,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\Assertions.cy.js\"\n}",
+              "code": "cy.visit(\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\");\n//should and\n//cy.url().should('include','orangehrmlive.com') //checking the text in the provided URL\n//cy.url().should('eq','https://opensource-demo.orangehrmlive.com/web/index.php/auth/login') //checking the URL\n//cy.url().should('contain','orangehrm')\n//cy.url().should('include','orangehrmlive.com')\n//.should('eq','https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')\ncy.url().should('include', 'orangehrmlive.com').and('eq', 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login') //checking the URL\n.and('contain', 'orangehrm').and('not.contain', 'greenhrm');\n//be.visible - one more assertion\ncy.get(\"input[placeholder='Username']\").type(\"Admin\"); //provide value to text box\ncy.get(\"input[placeholder='Username']\").should('have.value', 'Admin');",
+              "err": {},
+              "uuid": "601c1a4d-0e4b-41b0-9581-3c3b691ef095",
+              "parentUUID": "d2c13c66-0c99-4e74-9c2f-9799708415eb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "explicit assertions",
+              "fullTitle": "assertions explicit assertions",
+              "timedOut": null,
+              "duration": 6971,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\Assertions.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\Assertions.cy.js\\\\assertions -- explicit assertions (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit(\"https://opensource-demo.orangehrmlive.com/web/index.php/auth/login\");\ncy.get(\"input[placeholder='Username']\").type('Admin');\ncy.get(\"input[placeholder='Password']\").type('admin123');\ncy.get(\"button[type='submit']\").click();\n//javascript for explict assertions\nlet expName = \"Dashboard\";\n// Get the element containing the text and validate\ncy.get('.oxd-topbar-header-breadcrumb > .oxd-text').then(element => {\n  let actName = element.text(); // Extract the text from the element\n  //BDD style we use expect keyword\n  expect(actName).to.eq(expName);\n  expect(actName).to.not.eq(expName);\n  //TDD style use assert keyword\n  assert.equal(actName, expName);\n  assert.notEqual(actName, expName);\n});",
+              "err": {
+                "message": "AssertionError: expected 'Dashboard' to not equal 'Dashboard'",
+                "estack": "AssertionError: expected 'Dashboard' to not equal 'Dashboard'\n    at Context.eval (webpack://cypress-automation/./cypress/e2e/1-getting-started/Assertions.cy.js:42:33)",
+                "diff": ""
+              },
+              "uuid": "6777747b-9914-449c-8397-b91d4348c0fa",
+              "parentUUID": "d2c13c66-0c99-4e74-9c2f-9799708415eb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "601c1a4d-0e4b-41b0-9581-3c3b691ef095"
+          ],
+          "failures": [
+            "6777747b-9914-449c-8397-b91d4348c0fa"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 14065,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

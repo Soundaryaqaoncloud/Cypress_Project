@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-30T12:03:49.538Z",
+    "end": "2024-11-30T12:04:25.089Z",
+    "duration": 35551,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "74f0c4c4-b14c-4a79-a56a-535e355b398a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\Customcommands.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\Customcommands.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "39ce8f21-f8f7-4a03-81b3-74b76ee8f7aa",
+          "title": "Custom Command",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login",
+              "fullTitle": "Custom Command Login",
+              "timedOut": null,
+              "duration": 18256,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\Customcommands.cy.js\"\n}",
+              "code": "cy.login('Admin', 'admin123'); //valid \ncy.title().should('be.equal', 'OrangeHRM');\ncy.login('Admin', 'admin1234'); //invalid \ncy.title().should('be.equal', 'OrangeHRM');\ncy.login('Admin', 'admin123'); //valid \ncy.title().should('be.equal', 'OrangeHRM');",
+              "err": {},
+              "uuid": "26343047-1115-4c17-ae5d-0f3d8c153fe6",
+              "parentUUID": "39ce8f21-f8f7-4a03-81b3-74b76ee8f7aa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Add customer",
+              "fullTitle": "Custom Command Add customer",
+              "timedOut": null,
+              "duration": 7602,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\Customcommands.cy.js\"\n}",
+              "code": "cy.login('Admin', 'admin123');\ncy.log(\"Adding customer......\");",
+              "err": {},
+              "uuid": "fbfe5fc7-1f4a-46c6-bb53-b4163e675f96",
+              "parentUUID": "39ce8f21-f8f7-4a03-81b3-74b76ee8f7aa",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Edit customer",
+              "fullTitle": "Custom Command Edit customer",
+              "timedOut": null,
+              "duration": 5386,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\Customcommands.cy.js\"\n}",
+              "code": "cy.login('Admin', 'admin123');\ncy.log(\"Editing customer......\");",
+              "err": {},
+              "uuid": "794bdc57-0edf-473a-9a06-b96870df8d4b",
+              "parentUUID": "39ce8f21-f8f7-4a03-81b3-74b76ee8f7aa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "26343047-1115-4c17-ae5d-0f3d8c153fe6",
+            "fbfe5fc7-1f4a-46c6-bb53-b4163e675f96",
+            "794bdc57-0edf-473a-9a06-b96870df8d4b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31244,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

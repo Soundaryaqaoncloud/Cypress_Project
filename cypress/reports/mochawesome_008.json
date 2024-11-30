@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-30T12:05:30.556Z",
+    "end": "2024-11-30T12:05:31.224Z",
+    "duration": 668,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "479de012-e08a-4041-9ca0-a26b7318aa03",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\Hooks.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\Hooks.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e79611bf-6731-475d-b87f-9de135db0b7f",
+          "title": "Hooks",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Search",
+              "fullTitle": "Hooks Search",
+              "timedOut": null,
+              "duration": 470,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\Hooks.cy.js\"\n}",
+              "code": "cy.log(\"***  Searching  ***\");",
+              "err": {},
+              "uuid": "f777791c-af88-4252-b09e-911bc4182bae",
+              "parentUUID": "e79611bf-6731-475d-b87f-9de135db0b7f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Advanced Search",
+              "fullTitle": "Hooks Advanced Search",
+              "timedOut": null,
+              "duration": 57,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\Hooks.cy.js\"\n}",
+              "code": "cy.log(\"*** Advanced Searching  ***\");",
+              "err": {},
+              "uuid": "bafa526b-28d8-498b-ba59-7626cdc1c46d",
+              "parentUUID": "e79611bf-6731-475d-b87f-9de135db0b7f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Listing products",
+              "fullTitle": "Hooks Listing products",
+              "timedOut": null,
+              "duration": 63,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\1-getting-started\\\\Hooks.cy.js\"\n}",
+              "code": "cy.log(\"***  Listing products  ***\");",
+              "err": {},
+              "uuid": "cb2a118e-405a-4652-9087-da23826a455c",
+              "parentUUID": "e79611bf-6731-475d-b87f-9de135db0b7f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f777791c-af88-4252-b09e-911bc4182bae",
+            "bafa526b-28d8-498b-ba59-7626cdc1c46d",
+            "cb2a118e-405a-4652-9087-da23826a455c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 590,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
