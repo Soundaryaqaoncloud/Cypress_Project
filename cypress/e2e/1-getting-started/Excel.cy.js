@@ -1,45 +1,29 @@
-describe('Excel Data-Driven Testing with Demo Registration Page', () => {
-    
-    let rowsLength
-    let rowsData
-  
-    before(() => {
-      
-      cy.fixture('xlsxData').then((data) => {
-        rowsLength = data.length
-        rowsData = data
-      })
-    })
-  
-    it('Log Excel Data for Verification', () => {
-      
-      cy.log(rowsData)
-    })
-  
-    it('Data-Driven Test: Register Users', () => {
-        
-        cy.visit('https://demo.wpeverest.com/user-registration/column-1/')
-        
-        
-        cy.fixture('xlsxData').then((data) => {
-          for (let i = 0; i < rowsLength; i++) {
-            const user = rowsData[i]
-    
-            // Fill in the registration form
-            cy.get("#user_login").clear().type(user.username)
-            cy.get("#user_email").clear().type(user.userEmail)
-            cy.get('#user_pass').clear().type(user.userPassword)
-            cy.get('#user_confirm_password').clear().should('be.visible').type(user.confirmPassword)
-    
-            // Submit the form
-            cy.get('.btn').click()
+describe('Data Driven Testing Using Excel File', () => {
+  let rowsData
 
-            //Successful message
-            //cy.get('#ur-submit-message-node').should('have.text', 'User successfully registered.')
+  before(() => {
     
+    cy.task('readXlsx', { file: 'cypress/fixtures/cypressexcel.xlsx', sheet: 'Sheet1' }).then((rows) => {
+      rowsData = rows
+      cy.writeFile("cypress/fixtures/xlsxData.json", rows)
+    })
+
+    cy.visit('https://demo.wpeverest.com/user-registration/column-1/')
+    cy.wait(5000)
+  })
+
+  it('Data Driven: Register User', () => {
+    cy.fixture('xlsxData').then((data) => {
+      
+      for (let i = 0; i < data.length; i++) {
+        cy.get("#user_login").clear().type(data[i]["Username"])
+        cy.get("#user_email").clear().type(data[i]["User Email"])
+        cy.get('#user_pass').clear().type(data[i]["User Password"])
+        cy.get('#user_confirm_password').clear().should('be.visible').type(data[i]["Confrim Password"])
         
-        }
-      })
+        cy.get('.btn').click({ force: true })
+
+      }
     })
   })
-  
+})
